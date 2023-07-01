@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+    margin: 0;
+    box-sizing: border-box; /* border dziecka zawiera się w borderze rodzica */
+    font-family: "Rubik", sans-serif;
+}
+
+main {
+    display: flex;
+    overflow: hidden; /* to co się nie mieści to jest zakryte */
+    transition: 0.2s; /* przejście można sterować 4 spr. w tym czasem */
+    max-width: 1920px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+.left_Container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto; /* z pionowym scrollbarem */
+    width: 100%;
+    max-width: 45%;
+    min-width: 360px;
+    height: 100vh;
+    padding: 32px;
+  }
+
+.right_Container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 55%;
+    height: 100vh;
+  }
+
+.lineWrapper {
+    position: relative;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    height: 23px;
+}
+
+.lineWrapper::before {    /* ::before - tworzy wirtualny element wraz z zawartocią */
+    content: "";       
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #edebf0;
+  }
+
+.lineWrapper > p {
+    position: absolute;
+    left: 50%;
+    display: block;
+    transform: translate(-50%); /* cofa element o 50% własnej długości */
+    margin: 0 auto;
+    background-color: white;
+    line-height: 23px;  /* wysokość pola liniowego albo ramek dla block */
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .logotyp {
+    position: absolute;
+    z-index:3; /* kontrola warstw wyświetlania */
+  }
