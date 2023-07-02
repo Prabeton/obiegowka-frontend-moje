@@ -69,3 +69,44 @@ main {
     position: absolute;
     z-index:3; /* kontrola warstw wyświetlania */
   }
+
+  .input{
+    position : relative;
+  }
+
+  .input > input {
+    border: 1px solid #edebf0;
+    border-radius: 7px;
+    width: 100%;
+    height: 56px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  .label {
+    position: absolute;
+    left: 6px;
+    top: -10px;
+    height: 20px;
+    padding: 0 2px;
+    background-color: white;
+    font-size: 10px;
+    line-height: 20px;
+    color: #64606a;
+  }
+
+  #firstNameError {
+    display: none;
+  }
+
+  #lastNameError {
+    display: none;
+  }
+
+  #emailError {
+    display: none;
+  }
+
+  #passwordError {
+    display: none;
+  }
