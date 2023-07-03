@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css"/>
   <link rel="stylesheet" href="global.css"/>
+  <link rel="stylesheet" href="index.css"/>
   <link rel="icon" type="image/png" href="./images/png/favicon.ico" size="32x32"/>
   <title>Pa_Per_Shop</title>
 </head>
@@ -13,28 +13,34 @@
   <main>
     <div class="left_Container">
       <div class="item_register">
+
         <p>Zarejestruj mnie..</p>
-        <button><img src="./images/png/fb.png"/>rejestracja przez Facebook</button>
-        <button><img src="./images/png/insta.png"/>rejestracja przez Instambuł</button>
+
+        <button><img src="./images/png/fb.png"/>Rejestracja przez Facebook</button>
+
+        <button><img src="./images/png/insta.png"/>Rejestracja przez Instambuł</button>
+
         <div class="lineWrapper pierwszy">
           <div class="line"></div>
           <p>Lub za pomocą maila</p>
         </div>
-        <form>
 
-          <div class="input">
-            <input name="firstName" type="text" placeholder="Joe"/>
-            <label class="label">First Name</label>
-            <div id="firstNameError" class="validationError">
-              First Name musi mieć od 2 do 20 liter, pierwsza litera musi być Wielka!
+        <form id="form" class="form">
+          <div class="nameBox">
+            <div class="input">
+              <input name="firstName" type="text" placeholder="Joe"/>
+              <label class="label">First Name</label>
+              <div id="firstNameError" class="validationError">
+                First Name musi mieć od 2 do 20 liter, pierwsza litera musi być Wielka!
+              </div>
             </div>
-          </div>
 
-          <div class="input">
-            <input name="lastName" type="text" placeholder="Doe"/>
-            <label class="label">Last Name</label>
-            <div id="lastNameError" class="validationError">
-              Last Name musi mieć od 2 do 20 liter, pierwsza litera musi być Wielka!
+            <div class="input">
+              <input name="lastName" type="text" placeholder="Doe"/>
+              <label class="label">Last Name</label>
+              <div id="lastNameError" class="validationError">
+                Last Name musi mieć od 2 do 20 liter, pierwsza litera musi być Wielka!
+              </div>
             </div>
           </div>
 
@@ -47,7 +53,7 @@
           </div>
 
           <div class="input">
-            <input name="password" type="password" placeholder="**********"/>
+            <input id="password" name="password" type="password" placeholder="**********"/>
             <label class="label">Password</label>
             <div id="passwordError" class="validationError">
               Hasło musi mieć co najmniej 8 znaków, małą i Wielką literę,
@@ -55,11 +61,28 @@
             </div>
           </div>
 
+          <div class="submitBox">
+            <div class="checkboxBox">
+              <input type="checkbox" name="checbox" id="terms" class="terms" />
+              <label for="terms">I have read the <a href="###">Terms & Conditions</a></label>
+            </div>
+
+            <div id="termsError" class="validationError">
+              Zaakceptuj warunki serwisu!
+            </div>
+
+            <button class="submit" type="submit" id="submit">
+              Zarejestruj się za darmo
+            </button>
+          </div>
         </form>
+
         <div class="lineWrapper drugi">
           <div class="line"></div>
         </div>
-        <div>Masz już konto? <a href="login.html">zaloguj się</a></div>
+
+        <div class="login-in">Masz już konto? <a href="login.html">zaloguj się</a></div>
+
       </div>
     </div>
     
