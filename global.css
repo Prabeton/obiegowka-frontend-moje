@@ -127,3 +127,42 @@ main {
     border-radius: 6px;
     background-color: #ff6939;
 }
+
+@media (max-width: 600px) {     /* poniżej 600px obowiązują wartości z @media */
+
+    .lineWrapper > p {          /* zmniejsza litery w napisie ---- Lub za pomocą maila ---- */
+        font-size: 10px;
+    }
+    main {
+        display: flex; 
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .right_Container {
+        justify-content: start;     /* ustawia wzdłuż osi głównej */
+        align-items: start;         /* ustawia wzdłuż osi poprzecznej do głównej */
+        max-width: 100%;
+        max-height: 250px;
+        height: 50vh;
+    }
+    .left_Container {
+        max-width: 100%;
+        min-width: 303px;
+        max-height: 50%;
+        height: 100%;
+    }
+    .nameBox {
+        flex-direction: column;
+        gap: 0;
+    }
+
+}
+
+@media (max-width: 900px) {     /* poniżej 900px obowiązują wartości z @media */
+
+    .logotyp > img {            /* zmienia wysokość logotypu i ustala marginesy */
+        margin: 32px;
+        height: 150px;
+    }
+
+}
