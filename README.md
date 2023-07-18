@@ -1,4 +1,7 @@
 # obiegowka-frontend-moje
+
+W tym projekcie pozwolę sobie na luz w temacie angielskich nazw i komentarzy
+
 Projekt na obiegowce - frontend : Pa_Per_Shop (pracz);
 
 
