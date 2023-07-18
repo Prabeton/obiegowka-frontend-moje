@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="global.css"/>
-  <link rel="stylesheet" href="login.css"/>
+  <link rel="stylesheet" href="logowanie.css"/>
   <link rel="icon" type="image/png" href="./images/png/favicon.ico" size="32x32"/>
   <title>logowanie - Pa_Per_Shop</title>
 </head>
@@ -23,9 +23,8 @@
         <div class="lineWrapper pierwszy"><p>Lub za pomocą maila</p></div>
 
         <form id="form" class="form">
-
           <div class="input">
-            <input name="email" type="text" placeholder="joe@doe.com"/>
+            <input id="email" name="email" type="text" placeholder="joe@doe.com"/>
             <label class="label">e-mail</label>
             <div id="emailError" class="validationError">To chyba nie jest poprawny format e-mail!</div>
           </div>
@@ -41,7 +40,7 @@
               <input id="zapamietajMnie" class="zapamietajMnie" type="checkbox" name="zapamietajMnie"/>
               <label for="zapamietajMnie">Zapamiętaj mnie <a href="przypomnienie-hasla.html">Zapomniałem hasła</a></label>
             </div>
-            <button class="submit" type="submit" id="submit">Zaloguj mnie</button>
+            <button id="submit" class="submit" type="submit">Zaloguj mnie</button>
           </div>
         </form>
 

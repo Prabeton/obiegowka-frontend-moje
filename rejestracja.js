@@ -47,7 +47,7 @@ function validateRegisterForm () {
 	// tutaj będą if'y z funkcją 'test'
 	// Właściwość 'test' jest jedną z metod dostępnych dla obiektów typu RegExp.
 	
-	if (!firstNameReg.test(firstName.value)) {
+	if (!firstNameReg.test($firstName.value)) {
 		$firstName.classList.add("error");
 		$firstNameError.classList.add("widoczny");	
 		kartaWstepu.$firstName = false;
@@ -56,7 +56,8 @@ function validateRegisterForm () {
 		$firstNameError.classList.remove("widoczny");
 		kartaWstepu.$firstName = true;
 	}
-	if (!lastNameReg.test(lastName.value)) {
+	
+	if (!lastNameReg.test($lastName.value)) {
 		$lastName.classList.add("error");
 		$lastNameError.classList.add("widoczny");	
 		kartaWstepu.$lastName = false;
@@ -65,7 +66,8 @@ function validateRegisterForm () {
 		$lastNameError.classList.remove("widoczny");
 		kartaWstepu.$lastName = true;
 	}
-	if (!emailReg.test(email.value)) {
+	
+	if (!emailReg.test($email.value)) {
 		$email.classList.add("error");
 		$emailError.classList.add("widoczny");	
 		kartaWstepu.$email = false;
@@ -73,8 +75,9 @@ function validateRegisterForm () {
 		$email.classList.remove("error");
 		$emailError.classList.remove("widoczny");
 		kartaWstepu.$email = true;
-	}	
-	if (!passwordReg.test(password.value)) {
+	}
+		
+	if (!passwordReg.test($password.value)) {
 		$password.classList.add("error");
 		$passwordError.classList.add("widoczny");	
 		kartaWstepu.$password = false;
@@ -83,7 +86,8 @@ function validateRegisterForm () {
 		$passwordError.classList.remove("widoczny");
 		kartaWstepu.$password = true;
 	}
-	if (!terms.checked) {
+	
+	if (!$terms.checked) {
 		$terms.classList.add("error");
 		$termsError.classList.add("widoczny");	
 		kartaWstepu.$terms = false;
@@ -92,9 +96,6 @@ function validateRegisterForm () {
 		$termsError.classList.remove("widoczny");
 		kartaWstepu.$terms = true;
 	}
-	
-	
-	
 	
 	function sprawdzKarteWstepu (object) {
 		for (let key in object) {
@@ -105,5 +106,6 @@ function validateRegisterForm () {
 		return true;
 	}
 	
-	return sprawdzKarteWstepu(kartaWstepu);		// to jest return z validateRegisterForm()
+	return sprawdzKarteWstepu(kartaWstepu);		
+	// to jest return z funkcji validateRegisterForm()
 }
