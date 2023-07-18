@@ -6,13 +6,13 @@
   <link rel="stylesheet" href="global.css"/>
   <link rel="stylesheet" href="index.css"/>
   <link rel="icon" type="image/png" href="./images/png/favicon.ico" size="32x32"/>
-  <title>Pa_Per_Shop</title>
+  <title>rejestracja - Pa_Per_Shop</title>
 </head>
 
 <body>
   <main>
     <div class="left_Container">
-      <div class="item_register">
+      <div class="item_register">   <!-- to jest div środkująco wyrównujący -->
 
         <p>Zarejestruj mnie..</p>
 
@@ -20,10 +20,7 @@
 
         <button><img src="./images/png/insta.png"/>Rejestracja przez Instambuł</button>
 
-        <div class="lineWrapper pierwszy">
-          <div></div>
-          <p>Lub za pomocą maila</p>
-        </div>
+        <div class="lineWrapper pierwszy"><p>Lub za pomocą maila</p></div>
 
         <form id="form" class="form">
           <div class="nameBox">
@@ -56,30 +53,27 @@
             <input id="password" name="password" type="password" placeholder="**********"/>
             <label class="label">Password</label>
             <div id="passwordError" class="validationError">
-              Hasło musi mieć co najmniej 8 znaków, małą i Wielką literę,
-              cyfrę i znak specjalny!
+              Hasło musi mieć co najmniej 8 znaków, małą i Wielką literę, cyfrę i znak specjalny!    <!-- i to tylko po to żebyś się potem wkurwiał -->
             </div>
           </div>
 
           <div class="submitBox">
             <div class="checkboxBox">
-              <input type="checkbox" name="checbox" id="terms" class="terms" />
-              <label for="terms">I have read the <a href="###">Terms & Conditions</a></label>
+              <input id="terms" class="terms" type="checkbox" name="checboxTerms"/>
+              <label for="terms">I have read the <a href="###">Terms & Conditions</a></label>   <!-- to jest label dla tego checkBoxa <!-- w sensie z linkiem w środku --> -->
             </div>
 
             <div id="termsError" class="validationError">
-              Zaakceptuj warunki serwisu!
+              Zaakceptuj warunki serwisu! Bo tak!
             </div>
 
-            <button class="submit" type="submit" id="submit">
+            <button id="submit" class="submit" type="submit">  <!-- jak wszystko masz submit to jesteś najlepszy -->
               Zarejestruj się za darmo
             </button>
           </div>
         </form>
 
-        <div class="lineWrapper drugi">
-          <div></div>
-        </div>
+        <div class="lineWrapper drugi"></div>
 
         <div class="login-in">Masz już konto? <a href="login.html">zaloguj się</a></div>
 
@@ -87,12 +81,12 @@
     </div>
     
     <div class="right_Container">
-      <div class="background"></div>
+      <div class="background"></div>  <!-- tło wstawiliśmy w css'ach -->
       <div class="logotyp">
-        <img src="./images/png/paper.png"/>
+        <img src="./images/png/paper.png"/>     <!-- a logotyp tutaj -->
       </div>
     </div>
-  </main>
+  </main> <!-- semanticonus znacznikus -->
 </body>
 </html>
 
