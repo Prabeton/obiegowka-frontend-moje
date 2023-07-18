@@ -20,56 +20,40 @@
 
         <button><img src="./images/png/insta.png"/>Logowanie przez Instambuł</button>
 
-        <div class="lineWrapper pierwszy">
-          <div></div>
-          <p>Lub za pomocą maila</p>
-        </div>
+        <div class="lineWrapper pierwszy"><p>Lub za pomocą maila</p></div>
 
         <form id="form" class="form">
 
           <div class="input">
             <input name="email" type="text" placeholder="joe@doe.com"/>
             <label class="label">e-mail</label>
-            <div id="emailError" class="validationError">
-              To chyba nie jest poprawny format e-mail!
-            </div>
+            <div id="emailError" class="validationError">To chyba nie jest poprawny format e-mail!</div>
           </div>
 
           <div class="input">
             <input id="password" name="password" type="password" placeholder="**********"/>
             <label class="label">Password</label>
-            <div id="passwordError" class="validationError">
-              Hasło musi mieć co najmniej 8 znaków, małą i Wielką literę,
-              cyfrę i znak specjalny!
-            </div>
+            <div id="passwordError" class="validationError">Hasło musi mieć co najmniej 8 znaków, małą i Wielką literę, cyfrę i znak specjalny!</div>
           </div>
 
           <div class="submitBox">
             <div class="checkboxBox">
-              <input type="checkbox" name="zapamietajMnie" id="zapamietajMnie" class="zapamietajMnie" />
-              <label for="zapamietajMnie">Zapamiętaj mnie <a href="password-recovery.html">Zapomniałem hasła</a></label>
+              <input id="zapamietajMnie" class="zapamietajMnie" type="checkbox" name="zapamietajMnie"/>
+              <label for="zapamietajMnie">Zapamiętaj mnie <a href="przypomnienie-hasla.html">Zapomniałem hasła</a></label>
             </div>
-
-            <button class="submit" type="submit" id="submit">
-              Zaloguj mnie
-            </button>
+            <button class="submit" type="submit" id="submit">Zaloguj mnie</button>
           </div>
         </form>
 
-        <div class="lineWrapper drugi">
-          <div></div>
-        </div>
+        <div class="lineWrapper drugi"></div>
 
         <div class="login-in">Nie masz jeszcze konta? <a href="index.html">Zarejestruj mnie</a></div>
-
       </div>
     </div>
     
     <div class="right_Container">
       <div class="background"></div>
-      <div class="logotyp">
-        <img src="./images/png/paper.png"/>
-      </div>
+      <div class="logotyp"><img src="./images/png/paper.png"/></div>
     </div>
   </main>
 </body>

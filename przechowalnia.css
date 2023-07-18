@@ -1,0 +1,31 @@
+/* W tym pliku będą różne klasy z wyobraźni Mariusza, 
+które pewnie jeszcze się przydadzą i ich sensu się dowiemy ;) */
+
+.title {
+    margin-bottom: 16px;
+    margin-top: 88px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #190f27;
+}
+  
+.subtitle {
+    font-size: 18px;
+    color: #64606a;
+}
+
+.validationError {
+    display: none;
+    font-size: 10px;
+    margin-top: 10px;
+    color: #ce0737;
+}
+
+.textInput .error {
+    border: 1px solid #ce0737;
+}
+
+.visible {
+    display: block;
+}
+
