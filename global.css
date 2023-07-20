@@ -125,6 +125,8 @@ main {
     color: #ce0737;
 }
 
+/* .input .error {} - oznacza, że reguła CSS odnosi się do elementów, które należą do obu podanych klas.  */
+/* W tym przypadku .input .error {} odnosi się do elementów, które mają zarówno klasę "input" jak i "error" */
 .input .error {
     border: 1px solid #ce0737;
 }
