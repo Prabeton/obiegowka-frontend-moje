@@ -6,11 +6,33 @@
 	<link rel="icon" type="image/png" href="./images/png/favicon.ico" size="32x32"/>
 	<link rel="stylesheet" href="global.css"/>
   	<link rel="stylesheet" href="odzyskiwanieHasla.css"/>
+	<link rel="icon" type="image/png" href="./images/png/favicon.ico" size="32x32"/>
 	<title>odzyskiwanie hasła - Pa_Per_Shop</title>
 </head>
 <body>
 	<main>
-		
+		<div class="left_Container">
+			<div class="item_recovery">
+				<p class="title">Zapomniałeś hasła?</p>
+				<div class="lineWrapper drugi"></div>
+          		<p class="subtitle">Podaj swój e-mail to wyślemy Ci link do zmiany hasła.</p>
+				<form>
+					<div class="input">
+						<input id="email" name="email" type="text" placeholder="podaj e-mail i naciśnij enter"/>
+						<label class="label">e-mail</label>
+						<div id="emailError" class="validationError">
+					  		To chyba nie jest poprawny format e-mail!
+						</div>
+					</div>
+				</form>
+				<div class="lineWrapper drugi"></div>
+				<div class="login-in">Powrót do <a href="logowanie.html">ekranu logowania</a></div>
+			</div>
+		</div>
+		<div class="right_Container">
+			<div class="background"></div>
+			<div class="logotyp"><img src="./images/webp/paper.webp"/></div>
+		</div>
 	</main>
 	<script src="odzyskiwanieHasla.js"></script>
 </body>

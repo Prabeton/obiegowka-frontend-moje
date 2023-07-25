@@ -45,6 +45,17 @@ main {
     height: 23px;
 }
 
+.pierwszy {
+    margin-bottom: 36px;
+}
+
+.drugi {
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+
+
 .lineWrapper::before {    /* ::before - tworzy wirtualny element wraz z zawartocią */
     content: "";       
     position: absolute;
@@ -182,4 +193,28 @@ main {
         height: 150px;
     }
 
+}
+
+a {
+    color: #64606a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-in {
+    color: #64606a;
+    font-size: 14px;
+}
+
+.title {
+    margin-bottom: 16px;
+    margin-top: 88px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #190f27;
+  }
+  
+.subtitle {
+    font-size: 14px;
+    color: #64606a;
 }
