@@ -3,18 +3,9 @@ const $email = document.getElementById("email");
 const $emailError = document.getElementById("emailError");
 const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-form.addEventListener ("submit", (event) => {
-	event.preventDefault();
-	if (validateRegisterForm()) {
-		console.log("request OK");
-	} else {
-		console.log("error! - validation NOT OK");
-	}
-});
+let entryCard = true;
 
 function validateRegisterForm () {
-	let entryCard = true;
-	const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	if (!emailReg.test($email.value)) {
 		$email.classList.add("error");
 		$emailError.classList.add("widoczny");	
@@ -32,3 +23,13 @@ function validateRegisterForm () {
 	}
 	return checkEntryCard(entryCard);	
 }
+
+$form.addEventListener ("submit", (event) => {
+	event.preventDefault();
+	if (validateRegisterForm()) {
+		console.log("request OK");
+	} else {
+		console.log("error! - validation NOT OK");
+	} 
+});
+

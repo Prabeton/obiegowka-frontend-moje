@@ -1,4 +1,4 @@
-const $form = dokument.getElementById("form");	// na $form ustawimy sobie Listener'a na cały formularz a w nim odpalimy funkcję walidującą w warunku if()
+const $form = document.getElementById("form");	// na $form ustawimy sobie Listener'a na cały formularz a w nim odpalimy funkcję walidującą w warunku if()
 const $firstName = document.getElementById("firstName");
 const $lastName = document.getElementById("lastName");
 const $email = document.getElementById("email");
@@ -16,14 +16,7 @@ const lastNameReg = /^[A-Z][a-z]{1,19}$/;
 const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordReg =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-$form.addEventListener("submit", (event) => {
-	event.preventDefault();
-	if (validateRegisterForm ()) {
-		console.log("wysyłamy request");
-	}else{
-		console.log("nie wysyłamy request'a - nie przeszedłeś walidacji na front-end'ie");
-	}
-});
+
 
 function validateRegisterForm () {
 	// na początku ustawiamy wartości obiektu "kartaWstepu" na true
@@ -98,3 +91,12 @@ function validateRegisterForm () {
 	return sprawdzKarteWstepu(kartaWstepu);		
 	// to jest return z funkcji validateRegisterForm()
 }
+
+$form.addEventListener("submit", (event) => {
+	event.preventDefault();
+	if (validateRegisterForm ()) {
+		console.log("wysyłamy request");
+	}else{
+		console.log("nie wysyłamy request'a - nie przeszedłeś walidacji na front-end'ie");
+	}
+});

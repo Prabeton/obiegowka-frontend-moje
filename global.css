@@ -79,7 +79,7 @@ main {
 
 .logotyp {
     position: absolute;
-    z-index:3; /* kontrola warstw wyświetlania */
+    z-index: 3;
 }
 
 .input{
@@ -109,26 +109,6 @@ main {
     color: #64606a;
 }
 
-#firstNameError {
-    display: none;
-}
-
-#lastNameError {
-    display: none;
-}
-
-#emailError {
-    display: none;
-}
-
-#passwordError {
-    display: none;
-}
-
-#termsError {
-    display: none;
-}
-
 .validationError {
     display: none;
     font-size: 10px;
@@ -142,9 +122,7 @@ main {
     border: 1px solid #ce0737;
 }
 
-.widoczny {
-    display: block;
-}
+
 
 ::-webkit-scrollbar {
     width: 6px;
@@ -212,9 +190,13 @@ a {
     font-size: 24px;
     font-weight: bold;
     color: #190f27;
-  }
+}
   
 .subtitle {
     font-size: 14px;
     color: #64606a;
+}
+
+.widoczny {
+    display: block;
 }

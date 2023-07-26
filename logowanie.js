@@ -1,7 +1,7 @@
-const $form = dokument.getElementById("form");
+const $form = document.getElementById("form");
 const $email = document.getElementById("email");
 const $password = document.getElementById("password");
-const $zapamietajMnie = document.getElelmentById("zapamietajMnie");
+const $zapamietajMnie = document.getElementById("zapamietajMnie");
 let zapamietacUsera = false;
 
 const $emailError = document.getElementById("emailError");
@@ -9,15 +9,6 @@ const $passwordError = document.getElementById("passwordError");
 
 const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-$form.addEventListener("submit", (event) => {
-	event.preventDefault();
-	if (validateLoginForm ()) {
-		console.log("wysyłamy request");
-	}else{
-		console.log("nie wysyłamy request'a - nie przeszedłeś walidacji na front-end'ie");
-	}
-});
 
 function validateLoginForm () {
 	let kartaWstepu = {
@@ -61,6 +52,15 @@ function validateLoginForm () {
 	}
 	return sprawdzKarteWstepu(kartaWstepu);		
 }
+
+$form.addEventListener("submit", (event) => {
+	event.preventDefault();
+	if (validateLoginForm ()) {
+		console.log("wysyłamy request");
+	}else{
+		console.log("nie wysyłamy request'a - nie przeszedłeś walidacji na front-end'ie");
+	}
+});
 	
 	
 	

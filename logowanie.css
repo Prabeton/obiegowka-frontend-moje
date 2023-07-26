@@ -139,10 +139,6 @@ button {
     cursor: pointer;
 }
 
-.widoczny {
-    display: block;
-}
-
 .checkboxBox {
     display: flex;
     justify-content: space-between;
