@@ -1,3 +1,6 @@
+const $access_token = localStorage.getItem("access_token");
+const BASE_URL = "https://ds-elp2-be.herokuapp.com/";
+
 const $userContent = document.getElementById("userContent");
 const $innerContent = document.getElementById("userContent");
 const logoutButton = document.querySelector(".logout");

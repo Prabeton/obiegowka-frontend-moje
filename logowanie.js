@@ -1,3 +1,7 @@
+// localStorage.setItem("your_email", $email.value);
+
+const BASE_URL = "https://ds-elp2-be.herokuapp.com/";
+
 const $form = document.getElementById("form");
 const $email = document.getElementById("email");
 const $password = document.getElementById("password");

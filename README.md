@@ -1,9 +1,14 @@
 # obiegowka-frontend-moje
 
-W tym projekcie pozwolę sobie na luz w temacie angielskich nazw i komentarzy
-
 Projekt na obiegowce - frontend : Pa_Per_Shop (pracz);
 
+try {
+  // Kod, który może spowodować błąd
+} catch (error) {
+  // Obsługa błędu
+} finally {
+  // Kod, który zostanie wykonany zawsze, niezależnie od tego, czy był błąd czy nie
+}
 
 FIGMA WIDOKI
 https://www.figma.com/file/lyN4fHrqUwxJ6Y7G10z0Be/CO-W--%7C--Sign-Up-%2F-Log-In?type=design&node-id=3930-78&mode=design&t=6BI6bw8OcY3M6mJa-0

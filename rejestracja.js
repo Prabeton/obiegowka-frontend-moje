@@ -1,4 +1,6 @@
-const $form = document.getElementById("form");	// na $form ustawimy sobie Listener'a na cały formularz a w nim odpalimy funkcję walidującą w warunku if()
+const BASE_URL = "https://ds-elp2-be.herokuapp.com/";
+
+const $form = document.getElementById("form"); 
 const $firstName = document.getElementById("firstName");
 const $lastName = document.getElementById("lastName");
 const $email = document.getElementById("email");
@@ -19,7 +21,7 @@ const passwordReg =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*
 
 
 function validateRegisterForm () {
-	// na początku ustawiamy wartości obiektu "kartaWstepu" na true
+	
 	let kartaWstepu = {
 		$firstName: true,
 		$lastName: true,
@@ -89,14 +91,46 @@ function validateRegisterForm () {
 	}
 	
 	return sprawdzKarteWstepu(kartaWstepu);		
-	// to jest return z funkcji validateRegisterForm()
+	
+}
+
+async function registerFn (data) {
+	try {
+		const response = await fetch(`${BASE_URL}auth/register`, {
+			method: "POST",
+			headers: {"Content-Type": "application/json"},
+			body: JSON.stringify(data),
+		});
+		if (response.status === 200) {
+			const result = await response.json();
+			console.log("status:200", result);
+			window.location.href = "sprawdzSkrzynke.html";
+		} else if (response.status === 403) {
+			console.log("status === 403");
+			return;
+		}
+	}
+	catch (error) {
+		console.error("catch (error)", error);
+	}
+	finally {
+		console.log("response finally");
+	}
 }
 
 $form.addEventListener("submit", (event) => {
 	event.preventDefault();
 	if (validateRegisterForm ()) {
-		console.log("wysyłamy request");
+		const data = {
+			email: $email.value,
+			firstName: $firstName.value,
+			lastName: $lastName.value,
+			password: $password.value,
+		  };
+		registerFn(data);
+		localStorage.setItem("your_email", $email.value);
+		console.log("Jest OK! - wysyłamy request");
 	}else{
-		console.log("nie wysyłamy request'a - nie przeszedłeś walidacji na front-end'ie");
+		console.log("Nie wysyłamy request'a! - nie przeszedłeś walidacji na front-endzie!");
 	}
 });

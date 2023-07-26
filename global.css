@@ -200,3 +200,11 @@ a {
 .widoczny {
     display: block;
 }
+
+:focus {
+	outline: none;
+}
+
+input:focus {
+	background-color: rgb(211, 241, 205);
+}
