@@ -35,17 +35,6 @@ function validateRegisterForm () {
 		$terms: true,
 	};
 	
-	// *** a poniżej napiszemy ciąg dalszy funkcji walidującej *** 
-	// co się zgadza z Regexem a co nie, sprwdzimy checkboxa
-	// jeśli się coś nie będzie zgadzać to wyświetlimy na czerwono Error i komunikat co zrobił nie tak
-	// w tym momencie zmienimy (włąściwie nadajemy) clase tych Errorów na widoczną a klasę samego diva na czerony
-	// i w tym samym momencie zapiszemy prawdziwą warość konkretnego klucza w objekcie "kartaWstępu"
-	// potem napiszemy i odpalimy funkcję sprawdzającą czy wszystko jest "true" => jeśli tak to dajemy 'return true'
-	// jeśli nie, dajemy 'return false'
-	// tę funkcję to odpalił Mariusz w returnie, więc i ja tak zrobię bo to fajnie wygląda
-	
-	// tutaj będą if'y z funkcją 'test'
-	// Właściwość 'test' jest jedną z metod dostępnych dla obiektów typu RegExp.
 	
 	if (!firstNameReg.test($firstName.value)) {
 		$firstName.classList.add("error");
