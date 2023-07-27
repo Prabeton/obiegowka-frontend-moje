@@ -1,12 +1,13 @@
 //	{ "from loginFn()" : localStorage.setItem("your_token", result.access_token); }
 //  { "from logowanie.js" : localStorage.setItem("your_checked", zapamietacUsera); }
+//	{ "from registerFn()" : localStorage.setItem("your_email", $email.value); }
+
 const your_token = localStorage.getItem("your_token");
 const BASE_URL = "https://ds-elp2-be.herokuapp.com/";
 
 const $userContent = document.getElementById("userContent");
 const $innerContent = document.getElementById("innerContent");
 const logoutButton = document.querySelector(".logout");
-// const notLogged = true;
 
 if (!your_token) {
 	$userContent.innerHTML = `<h3> Coś poszło nie tak!</h3> 
