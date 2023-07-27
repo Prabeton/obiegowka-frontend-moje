@@ -1,4 +1,4 @@
-// localStorage.setItem("your_email", $email.value);
+//	{ "from registerFn()" : localStorage.setItem("your_email", $email.value); }
 
 const BASE_URL = "https://ds-elp2-be.herokuapp.com/";
 
@@ -57,15 +57,49 @@ function validateLoginForm () {
 	return sprawdzKarteWstepu(kartaWstepu);		
 }
 
+async function loginFn (data) {
+	try {
+		const response = await fetch(`${BASE_URL}auth/login`, {
+			method: "POST",
+			headers: {"Content-Type": "application/json"},
+			body: JSON.stringify(data),
+		});
+		const result = await response.json();
+		if (result.message == "Unauthorized") {
+			console.log("result.message == Unauthorized");
+			return;
+		} else {
+			localStorage.setItem("your_token", result.access_token);
+			window.location.href = "profile.html";
+			console.log("window.location.href = \"profile.html\";");
+		}
+	}
+	catch (error) {
+		console.error("catch (error)", error);
+	}
+	finally {
+		console.log("response finally od loginFn();");
+	}
+}
+
+
 $form.addEventListener("submit", (event) => {
 	event.preventDefault();
 	if (validateLoginForm ()) {
-		console.log("wysyłamy request");
+		console.log("Walidacja na froncie - OK. Wysyłamy request");
+		const data = {
+			email: $email.value,
+			password: $password.value,
+		};
+		loginFn(data);
 	}else{
 		console.log("nie wysyłamy request'a - nie przeszedłeś walidacji na front-end'ie");
+		return;
 	}
 });
-	
+
+
+
 	
 	
 	

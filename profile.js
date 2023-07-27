@@ -1,8 +1,9 @@
-const $access_token = localStorage.getItem("access_token");
+//	{ "from loginFn()" : localStorage.setItem("your_token", result.access_token); }
+const your_token = localStorage.getItem("your_token");
 const BASE_URL = "https://ds-elp2-be.herokuapp.com/";
 
 const $userContent = document.getElementById("userContent");
-const $innerContent = document.getElementById("userContent");
+const $innerContent = document.getElementById("innerContent");
 const logoutButton = document.querySelector(".logout");
 const notLogged = true;
 
