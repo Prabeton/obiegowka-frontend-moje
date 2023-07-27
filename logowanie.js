@@ -92,7 +92,9 @@ $form.addEventListener("submit", (event) => {
 			password: $password.value,
 		};
 		loginFn(data);
-	}else{
+		localStorage.setItem("your_checked", zapamietacUsera);
+		
+	} else {
 		console.log("nie wysyłamy request'a - nie przeszedłeś walidacji na front-end'ie");
 		return;
 	}
