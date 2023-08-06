@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
-@keyframes rotateAnimationRight {
+@keyframes spinRight {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
 }
   
-@keyframes rotateAnimationLeft {
+@keyframes spinLeft {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(-360deg); }
 }
+
 
 * {
     margin: 0;
@@ -219,6 +220,10 @@ input:focus {
 	background-color: rgb(211, 241, 205);
 }
 
+.hidden{
+    display: none;
+}
+
 .grayStripe {
     position: absolute;
     left: 0;
@@ -238,7 +243,7 @@ input:focus {
   
 .win {
     color: green;
-    opacity: 1;
+    opacity: 0;
   }
   
 .los {
@@ -256,18 +261,19 @@ input:focus {
     height: 200px;
 }
   
-
 .loader {
-	width: 100px;
-	height: 30px;
-	background-color: transparent;
-	position: relative;
-	border: none;
-	border-radius: 5px;
-	animation: rotateAnimationRight 1s linear infinite;
-	transform-origin: 92% 50%;
-    font-size: 44px;
-    font-weight: 500;
-    color:rgb(196, 64, 23)
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	border: 15px solid #ccc;
+	border-top: 15px solid #ce0737;
+	border-radius: 50%;
+	animation: spinRight 1s linear infinite;
 }
+
+.blur {
+    filter: blur(13px);
+    pointer-events: none;
+  }
+  
 

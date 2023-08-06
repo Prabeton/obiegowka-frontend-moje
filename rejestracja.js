@@ -13,11 +13,11 @@ const $emailError = document.getElementById("emailError");
 const $passwordError = document.getElementById("passwordError");
 const $termsError = document.getElementById("termsError");
 
-const firstNameReg = /^[A-Z][a-z]{1,19}$/;
-const lastNameReg = /^[A-Z][a-z]{1,19}$/;
+const firstNameReg = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]{1,19}$/;
+const lastNameReg =  /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]{1,19}$/;
 const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordReg =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
+// without Polish symbols - lastNameReg = /^[A-Z][a-z]{1,19}$/;
 
 
 function validateRegisterForm () {
