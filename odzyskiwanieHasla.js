@@ -28,6 +28,8 @@ $form.addEventListener ("submit", (event) => {
 	event.preventDefault();
 	if (validateRegisterForm()) {
 		console.log("request OK");
+		localStorage.setItem("your_email", $email.value);
+		window.location.href = "sprawdzSkrzynke.html";
 	} else {
 		console.log("error! - validation NOT OK");
 	} 

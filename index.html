@@ -13,6 +13,8 @@
   <main>
     <div class="left_Container">
       <div class="item_register">  
+        <div id="win" class="grayStripe win">Twoja rejestracja powiodła się..</div>
+        <div id="los" class="grayStripe los">Nie udało nam się, Ciebie zarejestrować!</div>
         <p>Zarejestruj mnie..</p>
 
         <button><img src="./images/png/fb.png"/>Rejestracja przez Facebook</button>
@@ -52,21 +54,21 @@
             <input id="password" name="password" type="password" placeholder="**********"/>
             <label class="label">Password</label>
             <div id="passwordError" class="validationError">
-              Hasło musi mieć co najmniej 8 znaków, małą i Wielką literę, cyfrę i znak specjalny!    <!-- i to tylko po to żebyś się potem wkurwiał -->
+              Hasło musi mieć co najmniej 8 znaków, małą i Wielką literę, cyfrę i znak specjalny!    <!-- and that's just to piss you off -->
             </div>
           </div>
 
           <div class="submitBox">
             <div class="checkboxBox">
               <input id="terms" class="terms" type="checkbox" name="checboxTerms"/>
-              <label for="terms">I have read the <a href="###">Terms & Conditions</a></label>   <!-- to jest label dla tego checkBoxa <!-- w sensie z linkiem w środku --> 
+              <label for="terms">I have read the <a href="###">Terms & Conditions</a></label>  
             </div>
 
             <div id="termsError" class="validationError">
               Zaakceptuj warunki serwisu! Bo tak!
             </div>
 
-            <button id="submit" class="submit" type="submit">  <!-- jak wszystko masz submit to jesteś najlepszy -->
+            <button id="submit" class="submit" type="submit">  <!-- if you have everything submit to you are the best -->
               Zarejestruj się za darmo
             </button>
           </div>
@@ -86,6 +88,9 @@
       </div>
     </div>
   </main> 
+  <div id="popUp" class="popUp">
+    <div class="loader">..loading</div>
+  </div>
   <script src="rejestracja.js"></script>
 </body>
 </html>
