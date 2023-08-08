@@ -19,6 +19,10 @@ const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordReg =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 // without Polish symbols - lastNameReg = /^[A-Z][a-z]{1,19}$/;
 
+const $main = document.querySelector("main");
+const $win = document.getElementById("win");
+const $los = document.getElementById("los");
+const $popUp = document.getElementById("popUp");
 
 function validateRegisterForm () {
 	
@@ -94,6 +98,39 @@ function validateRegisterForm () {
 	
 }
 
+function setLosFn (text) {
+	$main.classList.add("blur");
+	$popUp.classList.add("popUp");
+	setTimeout(() => {
+		$main.classList.remove("blur");
+		$popUp.classList.remove("popUp");
+	},1000);
+	
+	$los.innerHTML = text;
+	$los.classList.add("opacityUp");
+	setTimeout(() => {
+		$los.classList.remove("opacityUp");
+	},3000);
+}
+
+function setWinFn() {
+	$main.classList.add("blur");
+	$popUp.classList.add("popUp");
+	setTimeout(() => {
+		$main.classList.remove("blur");
+		$popUp.classList.remove("popUp");
+	},1500);
+	
+	$win.classList.add("opacityUp");
+	setTimeout(() => {
+		$win.classList.remove("opacityUp");
+		window.location.href = "logowanie.html";
+	},3000);
+}
+
+
+
+
 async function registerFn (data) {
 	try {
 		const response = await fetch(`${BASE_URL}auth/register`, {
@@ -101,17 +138,21 @@ async function registerFn (data) {
 			headers: {"Content-Type": "application/json"},
 			body: JSON.stringify(data),
 		});
-		if (response.status === 200) {
+		console.log("Status odpowiedzi:", response.status);
+		if (response.status === 200 || response.status === 201) {
 			const result = await response.json();
 			console.log("status:200", result);
-			window.location.href = "sprawdzSkrzynke.html";
+			setWinFn();
+			
 		} else if (response.status === 403) {
+			setLosFn("Taki e-mail już istnieje w naszej bazie! Podaj inny e-mail")
 			console.log("status === 403");
 			return;
 		}
 	}
 	catch (error) {
 		console.error("catch (error)", error);
+		setLosFn("Coś poszło nie tak! Możliwe przeciążenie sieci energetycznej");
 	}
 	finally {
 		console.log("response finally");
