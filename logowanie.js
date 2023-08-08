@@ -14,6 +14,11 @@ const $passwordError = document.getElementById("passwordError");
 const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+const $main = document.querySelector("main");
+const $win = document.getElementById("win");
+const $los = document.getElementById("los");
+const $popUp = document.getElementById("popUp");
+
 function validateLoginForm () {
 	let kartaWstepu = {
 		$email: true,
@@ -57,6 +62,36 @@ function validateLoginForm () {
 	return sprawdzKarteWstepu(kartaWstepu);		
 }
 
+function setLosFn () {
+	$main.classList.add("blur");
+	$popUp.classList.add("popUp");
+	setTimeout(() => {
+		$main.classList.remove("blur");
+		$popUp.classList.remove("popUp");
+	},1000);
+	
+	$los.classList.add("opacityUp");
+	setTimeout(() => {
+		$los.classList.remove("opacityUp");
+		window.location.href = "index.html";
+	},2000);
+}
+
+function setWinFn() {
+	$main.classList.add("blur");
+	$popUp.classList.add("popUp");
+	setTimeout(() => {
+		$main.classList.remove("blur");
+		$popUp.classList.remove("popUp");
+	},1500);
+	
+	$win.classList.add("opacityUp");
+	setTimeout(() => {
+		$win.classList.remove("opacityUp");
+		window.location.href = "profile.html";
+	},2000);
+}
+
 async function loginFn (data) {
 	try {
 		const response = await fetch(`${BASE_URL}auth/login`, {
@@ -67,10 +102,10 @@ async function loginFn (data) {
 		const result = await response.json();
 		if (result.message == "Unauthorized") {
 			console.log("result.message == Unauthorized");
-			return;
+			setLosFn();
 		} else {
 			localStorage.setItem("your_token", result.access_token);
-			window.location.href = "profile.html";
+			setWinFn();
 			console.log("window.location.href = \"profile.html\";");
 		}
 	}

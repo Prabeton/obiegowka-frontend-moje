@@ -14,7 +14,8 @@
   <main>
     <div class="left_Container">
       <div class="item_register">
-
+        <div id="win" class="grayStripe win">Logowanie przebiegło pomyślnie!</div>
+        <div id="los" class="grayStripe los">Taki user nie istnieje!  Zarejestruj się..</div>
         <p>Zaloguj mnie..</p>
 
         <button><img src="./images/png/fb.png"/>Logowanie przez Facebook</button>
@@ -56,6 +57,9 @@
       <div class="logotyp"><img src="./images/webp/paper.webp"/></div>
     </div>
   </main>
+  <div id="popUp" class="hidden">
+    <div class="loader"></div>
+  </div>
   <script src="logowanie.js"></script>
 </body>
 </html>
